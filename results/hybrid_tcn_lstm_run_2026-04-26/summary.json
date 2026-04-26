@@ -1,0 +1,118 @@
+{
+  "objective": "Research Objective 1",
+  "target_column": "ACADEMIC_PROGRAM",
+  "dataset": {
+    "rows_before_filter": 12411,
+    "rows_after_filter": 12409,
+    "classes_before_filter": 21,
+    "classes_after_filter": 19,
+    "excluded_classes": {
+      "INDUSTRIAL CONTROL AND AUTOMATION ENGINEERING": 1,
+      "TEXTILE ENGINEERING": 1
+    },
+    "min_class_count": 3
+  },
+  "protocol": {
+    "runs": 10,
+    "metric": "macro_f1",
+    "significance_test": "paired_t_test"
+  },
+  "hybrid_model": {
+    "architecture": "static_mlp + causal_tcn + uni_lstm + fusion",
+    "macro_f1_mean": 0.0460682635087096,
+    "macro_f1_std": 0.009634730493591967,
+    "meets_success_target": false
+  },
+  "ablation_static_only": {
+    "architecture": "static_mlp_only",
+    "macro_f1_mean": 0.03676196827279708,
+    "macro_f1_std": 0.008564336267759844
+  },
+  "ablation_significance": {
+    "p_value": 0.01433552358552733,
+    "is_significant": true
+  },
+  "success_target": 0.9,
+  "per_run_metrics": [
+    {
+      "run": 1,
+      "seed": 42,
+      "hybrid_val_macro_f1": 0.041661338554687545,
+      "hybrid_test_macro_f1": 0.04241278650452216,
+      "static_only_val_macro_f1": 0.04853161740471196,
+      "static_only_test_macro_f1": 0.045375841441008334
+    },
+    {
+      "run": 2,
+      "seed": 43,
+      "hybrid_val_macro_f1": 0.07119548121878266,
+      "hybrid_test_macro_f1": 0.057580507800333317,
+      "static_only_val_macro_f1": 0.0517647055026675,
+      "static_only_test_macro_f1": 0.04594219274597398
+    },
+    {
+      "run": 3,
+      "seed": 44,
+      "hybrid_val_macro_f1": 0.0392228231120451,
+      "hybrid_test_macro_f1": 0.03910069609595458,
+      "static_only_val_macro_f1": 0.03596957578798656,
+      "static_only_test_macro_f1": 0.03512648489146268
+    },
+    {
+      "run": 4,
+      "seed": 45,
+      "hybrid_val_macro_f1": 0.038988762886063004,
+      "hybrid_test_macro_f1": 0.03760274009415626,
+      "static_only_val_macro_f1": 0.03495112058522515,
+      "static_only_test_macro_f1": 0.034603875605198266
+    },
+    {
+      "run": 5,
+      "seed": 46,
+      "hybrid_val_macro_f1": 0.05120700127514679,
+      "hybrid_test_macro_f1": 0.046942729317935195,
+      "static_only_val_macro_f1": 0.04397976018213328,
+      "static_only_test_macro_f1": 0.028424721280893284
+    },
+    {
+      "run": 6,
+      "seed": 47,
+      "hybrid_val_macro_f1": 0.06956387544457587,
+      "hybrid_test_macro_f1": 0.06311641142772959,
+      "static_only_val_macro_f1": 0.04389657448157527,
+      "static_only_test_macro_f1": 0.04238474218314147
+    },
+    {
+      "run": 7,
+      "seed": 48,
+      "hybrid_val_macro_f1": 0.05029400424137266,
+      "hybrid_test_macro_f1": 0.03934042277518957,
+      "static_only_val_macro_f1": 0.04755910765181216,
+      "static_only_test_macro_f1": 0.04154575284041051
+    },
+    {
+      "run": 8,
+      "seed": 49,
+      "hybrid_val_macro_f1": 0.047577847055981885,
+      "hybrid_test_macro_f1": 0.0436968794672914,
+      "static_only_val_macro_f1": 0.044226635224798465,
+      "static_only_test_macro_f1": 0.04203394647323927
+    },
+    {
+      "run": 9,
+      "seed": 50,
+      "hybrid_val_macro_f1": 0.04121759828647655,
+      "hybrid_test_macro_f1": 0.034808072612855005,
+      "static_only_val_macro_f1": 0.03317874537257986,
+      "static_only_test_macro_f1": 0.018515340817627204
+    },
+    {
+      "run": 10,
+      "seed": 51,
+      "hybrid_val_macro_f1": 0.06812101938576744,
+      "hybrid_test_macro_f1": 0.05608138899112889,
+      "static_only_val_macro_f1": 0.04819074580545698,
+      "static_only_test_macro_f1": 0.03366678444901578
+    }
+  ]
+}
